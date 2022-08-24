@@ -66,14 +66,15 @@
                                     <li>Movies</li>
                                 </ul>
                             </div>
-
                         </div>
+
                         <div class="col-img">
                             <img src="../assets/dc-logo-bg.png">
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="wrapper-bot">
                 <div class="container">
@@ -205,19 +206,21 @@ export default {
 
         .wrapper-mid{
             height: calc(100% - 230px);
-            overflow-y: hidden;
 
             .cols{
                 display: flex;
                 justify-content: space-between;
+                height: 100%;
 
                 .col{
                     width: 50%;
+                    height: 100%;
                     display: flex;
-                    padding: 50px;
+                    padding-top: 50px;
 
                     .cont-col{
                         margin-right: 40px;
+                        height: 100%;
 
                         h2{
                             color: $color_text;
@@ -236,20 +239,14 @@ export default {
 
                 .col-img{
                     width: 50%;
-                    height: 500px;
-                    bottom: 50%;
-                    
 
                     img{
                         width: 100%;
                         height: 100%;
-                        object-fit: contain;
-                        overflow: hidden;
-                        
+                        object-fit: cover;
                     }
                 }
             }
-
         }
 
         .wrapper-bot{
