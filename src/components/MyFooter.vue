@@ -1,7 +1,5 @@
 <template>
     <footer>
-        <div>
-
             <div class="wrapper-top">
                 <div class="container">
                     <ul>
@@ -29,8 +27,6 @@
                     
                 </div>
             </div>
-
-        </div>
     </footer>
 </template>
 
@@ -106,12 +102,11 @@ export default {
 
         .wrapper-mid{
             height: calc(100% - 270px);
-            background-color: red;
         }
 
         .wrapper-bot{
             height: 100px;
-            background-color: green;
+            background-color: $backgrund_footer_bot;
         }
     }
 
