@@ -84,6 +84,7 @@
 
                         <div class="social">
                             <h2>FOLLOW AS</h2>
+                            <img v-for="(social, indice) in social" :key="indice" :src="social.url" :alt="social.nome">
                         </div>
                     </div>
                     
@@ -123,6 +124,30 @@ export default {
                                 direzione: '#',
                                 img: require ('../assets/buy-dc-power-visa.svg')
                             },
+                        ],
+
+            social:     [
+                            {
+                                url: require ('../assets/footer-facebook.png') ,
+                                nome: 'facebook'
+                            },
+                            {
+                                url: require ('../assets/footer-twitter.png'),
+                                nome: 'twitter'
+                            },
+                            {
+                                url: require ('../assets/footer-youtube.png'),
+                                nome: 'youtube'
+                            },
+                            {
+                                url: require ('../assets/footer-pinterest.png'),
+                                nome: 'pinterest'
+                            },
+                            {
+                                url: require ('../assets/footer-periscope.png'),
+                                nome: 'periscope'
+                            },
+
                         ]
         }
     }
@@ -247,7 +272,13 @@ export default {
                 }
 
                 .social{
+                    display: flex;
+                    align-items: center;
                     color: #0282f9;
+
+                    img{
+                        margin-left: 15px;
+                    }
                 }
             }
         }
