@@ -82,17 +82,33 @@ export default {
             background-color: $backgrund_footer_top;
             ul{
                 display: flex;
-                align-content: center;
+                align-items: center;
                 justify-content: space-between;
+                height: 100%;
 
                 li{
+                    list-style: none;
                     
                     .wrapper-link{
-                        display: flex;
-                        align-content: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                        .img_link{
+                            width: 50px;
+                            margin-right: 10px;
+                            
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;                                 
+                            }
+                        }
 
                         a{
                             line-height: 100%;
+                            text-decoration: none;
+                            color: $color_text;
                         }
                     }
                 }
