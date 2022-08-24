@@ -6,8 +6,8 @@
             </div>
             <nav>
                 <ul>
-                    <li v-for="(link, indice) in links" :key="indice">
-                        <a :href="link.direzione">{{link.nome}}</a>
+                    <li v-for="(link, indice) in links" :key="indice" >
+                        <a :href="link.direzione" :class="link.attivo? 'active':''">{{link.nome}}</a>
                     </li>
                 </ul>
             </nav>
@@ -108,7 +108,15 @@ export default {
                         text-decoration: none;
                         color: $color_text_nav;
                         font-weight: bold;
+                        height: 100%;
+                        line-height: 150px;
                         margin: 0 10px;
+                            &:hover, &.active{
+                            color: $backgrund_footer_top;
+                            border-bottom: 3px solid $backgrund_footer_top;
+                            
+                        }
+                        
                     }
                 }
 
