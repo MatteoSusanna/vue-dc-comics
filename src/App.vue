@@ -25,6 +25,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+  @import './styles/variabili_colore.scss';
+  
 
 </style>
