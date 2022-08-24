@@ -79,6 +79,45 @@ export default {
 </script>
 
 <style lang="scss">
+    @import '../styles/variabili_colore.scss';
+    header{
+        height: 150px;
+        padding-top: 10px;
+
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+                
+            ul{
+                display: flex;
+                align-content: center;
+                list-style: none;
+                height: 100%;
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        text-decoration: none;
+                        color: $color_text_nav;
+                        font-weight: bold;
+                        margin: 0 10px;
+                    }
+                }
+
+            }
+                
+
+
+        }
+    }
 
 
 </style>

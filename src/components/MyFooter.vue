@@ -1,5 +1,10 @@
 <template>
-    <h1>ciao</h1>
+    <footer>
+        <div class="container">
+            <div></div>
+
+        </div>
+    </footer>
 </template>
 
 <script>
@@ -9,5 +14,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+    footer{
+        height: calc(100vh - 250px);
+        background-color: grey;
+    }
 
 </style>

@@ -28,6 +28,12 @@ export default {
 <style lang="scss">
 
   @import './styles/variabili_colore.scss';
+  @import './styles/generali.scss';
+
+  html{
+    font-family: sans-serif;
+  }
+
   
 
 </style>
