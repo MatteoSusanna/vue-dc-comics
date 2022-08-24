@@ -18,12 +18,74 @@
 
             <div class="wrapper-mid">
                 <div class="container">
+                    <div class="cols">
+                        <div class="col">
+                            <div class="cont-col">
+                                <h2>DC COMICS</h2>
+                                <ul>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                </ul>
 
+                                <h2>SHOP</h2>
+                                <ul>
+                                    <li>Shop DC</li>
+                                    <li>ShopDC Collectibles</li>
+                                </ul>
+                            </div>
+
+                            <div class="cont-col">
+                                <h2>DC</h2>
+                                <ul>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                </ul>
+                            </div>
+
+                            <div class="cont-col">
+                                <h2>SITES</h2>
+                                <ul>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                    <li>TV</li>
+                                    <li>Comics</li>
+                                    <li>Movies</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-img">
+                            <img src="../assets/dc-logo-bg.png">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="wrapper-bot">
                 <div class="container">
+
+                    <div class="wrapper-footer-bot">
+
+                        <button class="btn">SIGN-UP NOW!</button>
+
+                        <div class="social">
+                            <h2>FOLLOW AS</h2>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -85,6 +147,7 @@ export default {
                 align-items: center;
                 justify-content: space-between;
                 height: 100%;
+                padding: 10px;
 
                 li{
                     list-style: none;
@@ -95,13 +158,13 @@ export default {
                             justify-content: center;
 
                         .img_link{
-                            width: 50px;
+                            width: 40px;
                             margin-right: 10px;
                             
                             img{
-                                height: 100%;
                                 width: 100%;
-                                object-fit: cover;                                 
+                                object-fit: cover;
+                                                             
                             }
                         }
 
@@ -118,11 +181,75 @@ export default {
 
         .wrapper-mid{
             height: calc(100% - 270px);
+
+            .cols{
+                display: flex;
+                justify-content: space-between;
+
+                .col{
+                    width: 50%;
+                    display: flex;
+                    padding: 50px;
+
+                    .cont-col{
+                        margin-right: 40px;
+
+                        h2{
+                            color: $color_text;
+                            margin: 10px 0;
+                        }
+    
+                        li{
+                            list-style: none;
+                            font-size: 17px;
+                            color: $color_text_footer;
+                            line-height: 25px;
+                        }
+                    }
+
+                }
+
+                .col-img{
+                    width: 50%;
+                    height: 500px;
+                    bottom: 50%;
+                    
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        overflow: hidden;
+                        
+                    }
+                }
+            }
+
         }
 
         .wrapper-bot{
             height: 100px;
             background-color: $backgrund_footer_bot;
+
+
+            .wrapper-footer-bot{
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn{
+                    padding: 10px;
+                    font-size: 18px;
+                    border-color: 3px solid blue;
+                    color: white;
+                    background-color: $backgrund_footer_bot;
+                }
+
+                .social{
+                    color: blue;
+                }
+            }
         }
     }
 
