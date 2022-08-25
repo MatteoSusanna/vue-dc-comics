@@ -187,7 +187,7 @@ export default {
                             margin-right: 10px;
                             
                             img{
-                                width: 100%;
+                                max-width: 100%;
                                 object-fit: cover;
                                                              
                             }

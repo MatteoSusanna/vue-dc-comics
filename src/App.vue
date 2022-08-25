@@ -33,8 +33,4 @@ export default {
   html{
     font-family: sans-serif;
   }
-
-  #app{
-    height: 100vh;
-  }
 </style>
