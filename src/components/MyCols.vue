@@ -3,7 +3,9 @@
        <div class="cont-col">
             <h2>{{titolo}}</h2>
             <ul>
-                <li v-for="(voce, indice) in urls" :key="indice">{{voce.voce}}</li>
+                <li v-for="(voce, indice) in urls" :key="indice">
+                    <a :href="voce.url">{{voce.voce}}</a>
+                </li>
             </ul>
        </div>
     </div>
@@ -37,6 +39,14 @@ export default {
             font-size: 17px;
             color: $color_text_footer;
             line-height: 25px;
+                a{
+                    text-decoration: none;
+                    color: $color_text_footer;
+                    &:hover{
+                        color: $color_text;
+                    }
+
+                }
             }
         }
 
