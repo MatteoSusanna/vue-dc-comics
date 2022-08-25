@@ -2,13 +2,18 @@
     <main>
         <div class="container">
 
+            <div class="button_wrap_pos">
+                <button class="btn btn-mod">CURRENT SERIES</button>
+            </div>
 
             <div class="comics">
-
-                <CardComics v-for="(comic, index) in comics" :key="index"  :fumetti="comic"/>
-
-                
+                <CardComics v-for="(comic, index) in comics" :key="index"  :fumetti="comic"/>                
             </div>
+
+            <div class="button_wrap">
+                <button class="btn">LOAD MORE</button>
+            </div>
+            
 
         </div>
     </main>
@@ -21,7 +26,7 @@ import CardComics from '../components/CardComics'
 export default {
     nome: 'MyMain',
     components: {
-        CardComics
+        CardComics,
     },
     data(){
         return{
@@ -104,11 +109,30 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     @import '../styles/variabili_colore.scss';
     main{
         background-color: $backgrund_main;
         color: $color_text;
         line-height: 100px;
+        padding: 30px;
+        position: relative;
+    }
+    .button_wrap{
+        text-align: center;
+    }
+
+    .button_wrap_pos{
+        position: absolute;
+        bottom: 94%;
+        left: 15%;
+    }
+
+    .btn{
+            background-color: $backgrund_footer_top;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 7px 40px;
     }
 </style>

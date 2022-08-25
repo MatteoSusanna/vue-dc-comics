@@ -9,10 +9,8 @@ export default {
 </script>
 
 <style lang='scss'>
-
     .jumbo{
         height: 350px;
         background-image: url('../assets/jumbotron.jpg');
     }
-
 </style>
