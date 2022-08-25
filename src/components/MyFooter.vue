@@ -20,52 +20,13 @@
                 <div class="container">
                     <div class="cols">
                         <div class="col">
-                            <div class="cont-col">
-                                <h2>DC COMICS</h2>
-                                <ul>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                </ul>
+                            <MyCols :urls="dcComics" :titolo="'DC COMICS'" />
+                            
+                            <MyCols :urls="dc" :titolo="'DC'" />
 
-                                <h2>SHOP</h2>
-                                <ul>
-                                    <li>Shop DC</li>
-                                    <li>ShopDC Collectibles</li>
-                                </ul>
-                            </div>
+                            <MyCols :urls="sites" :titolo="'SITES'" />
 
-                            <div class="cont-col">
-                                <h2>DC</h2>
-                                <ul>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                </ul>
-                            </div>
-
-                            <div class="cont-col">
-                                <h2>SITES</h2>
-                                <ul>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                    <li>TV</li>
-                                    <li>Comics</li>
-                                    <li>Movies</li>
-                                </ul>
-                            </div>
+                            
                         </div>
 
                         <div class="col-img">
@@ -95,8 +56,13 @@
 </template>
 
 <script>
+import MyCols from './MyCols'
+
 export default {
     nome: 'MyFooter',
+    components:{
+        MyCols,
+    },
     data(){
         return{
             linkfoot:   [
@@ -127,6 +93,120 @@ export default {
                             },
                         ],
 
+            dcComics:   [
+                            {
+                                voce: 'Characters',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Comics',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Movies',
+                                url:'#'
+                            },
+                            {
+                                voce: 'TV',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Games',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Videos',
+                                url:'#'
+                            },
+                            {
+                                voce: 'News',
+                                url:'#'
+                            },
+
+                        ],
+            shop:       [
+                            {
+                                voce: 'Shop DC',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Shop DC Collectibles',
+                                url:'#'
+                            },
+
+                        ],
+            dc:         [
+                            {
+                                voce: 'Terms Of Use',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Privacy policy (New)',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Ad Choices',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Advertising',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Jobs',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Subscriptions',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Talent Workshops',
+                                url:'#'
+                            },
+                            {
+                                voce: 'CPSC Certificates',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Ratings',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Shop Help',
+                                url:'#'
+                            },
+                            {
+                                voce: 'Contact Us',
+                                url:'#'
+                            },
+                        ],
+            
+            sites:      [
+                            {
+                                voce: 'DC',
+                                url:'#'
+                            },
+                            {
+                                voce: 'MAD Magazine',
+                                url:'#'
+                            },
+                            {
+                                voce: 'DC Kids',
+                                url:'#'
+                            },
+                            {
+                                voce: 'DC Universe',
+                                url:'#'
+                            },
+                            {
+                                voce: 'DC Power Visa',
+                                url:'#'
+                            },
+                            
+
+                        ],
+            
             social:     [
                             {
                                 url: require ('../assets/footer-facebook.png') ,
@@ -217,24 +297,6 @@ export default {
                     height: 100%;
                     display: flex;
                     padding-top: 50px;
-
-                    .cont-col{
-                        margin-right: 40px;
-                        height: 100%;
-
-                        h2{
-                            color: $color_text;
-                            margin: 10px 0;
-                        }
-    
-                        li{
-                            list-style: none;
-                            font-size: 17px;
-                            color: $color_text_footer;
-                            line-height: 25px;
-                        }
-                    }
-
                 }
 
                 .col-img{
